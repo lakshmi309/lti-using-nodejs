@@ -1,0 +1,25 @@
+<html>
+<head>    
+    <title>LTI Consumer - LMS</title>
+</head>
+
+<!-- SEND http request instead of Https request for localhost, because local development environment runs on http://localhost -->
+<body style="text-align: center">
+    <h2>LTI Consumer - LMS</h2>
+    <form action="http://192.168.5.6:3000/launch_lti" method="post">
+        <input type="hidden" name="lti_message_type" value="basic-lti-launch-request">
+        <input type="hidden" name="lti_version" value="LTI-1p0">
+        <input type="hidden" name="resource_link_id" value="120988f929-274612">
+        <input type="hidden" name="user_id" value="292832126">
+        <input type="hidden" name="roles" value="Instructor">
+        <input type="hidden" name="oauth_consumer_key" value="12345">
+        <input type="hidden" name="oauth_signature_method" value="HMAC-SHA1"/>
+        <input type="hidden" name="oauth_signature" value="h8rtTt5dQVc3+BUKozBoCQ1ssl8="/>
+        <input type="hidden" name="oauth_nonce" value="1234567"/>
+        <input type="hidden" name="oauth_timestamp" value="1538645548290"/>
+        <input type="hidden" name="oauth_version" value="1.0"/>
+        
+        <input type="submit" value="Launch LTI Tool">
+    </form>
+</body>
+</html>
